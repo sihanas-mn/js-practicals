@@ -1,26 +1,24 @@
-let deliveryStatus = false;
-let deliveryStatusFromUser;
+let deliveryList = [
+  (iphone = {
+    status: "delivered",
+    price: "60000",
+    quantity: "1",
+  }),
+  (mouse = {
+    status: "pending delivery",
+    price: "8000",
+    quantity: "3",
+  }),
+  (laptop = {
+    status: "canceled",
+    price: "80000",
+    quantity: "1",
+  }),
+];
 
-while (deliveryStatus == false) {
-  deliveryStatusFromUser = prompt(`has your product arrived yet? (yes / no): `);
+let userChoice = prompt(`choose a product staus you want to see. your recently added products are (iphone, mouse, laptop): `)
 
-  while (deliveryStatusFromUser !== "yes" && deliveryStatusFromUser !== "no") {
-    console.log(`invalid input!`);
-    deliveryStatusFromUser = prompt(
-      `has your product arrived yet? (yes / no): `,
-    );
-  }
-
-  if (deliveryStatusFromUser === "yes" || deliveryStatusFromUser === "no") {
-    if (deliveryStatusFromUser === "yes") {
-      deliveryStatus = true;
-    } else {
-      deliveryStatus = false;
-      console.log(`delivery in progress, wait till you recieve!`)
-    }
-  }
-}
-
-if (deliveryStatus == true) {
-  console.log(`your product delivered!`);
+for (i = 0; i < deliveryList.length; i++) {
+  let place = deliveryList[i];
+  
 }

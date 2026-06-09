@@ -1,16 +1,30 @@
-let marks = [50, 56, 85, 40, 35, 20, 32, 92, 61, 73]
-let totalMarks =  0
-let averageMarks = 0
-let passCount = 0
+let marks = [];
+let stopSys = false;
+let totalMarks = 0;
+let averageMarks = 0;
+let passCount = 0;
+let newMark;
 
-for (i = 0; i < 10; i++) {
-    totalMarks = totalMarks + marks[i]
-    averageMarks = totalMarks / marks.length
-    if (marks[i] >= 35) {
-        passCount++
+while (!stopSys) {
+  for (let i = 0; !stopSys; i++) {
+    newMark = Number(prompt(`enter a new mark of a student: `));
+
+    if (newMark !== "") {
+      marks.push(newMark);
+    } else {
+      console.log(`Enter the values in numbers only!`);
+      continue;
     }
-}
 
-console.log(`Total Mark: ${totalMarks}`)
-console.log(`Average Mark: ${averageMarks}`)
-console.log(`Pass Count: ${passCount}`)
+    totalMarks = totalMarks + marks[i];
+    averageMarks = totalMarks / marks.length;
+
+    if (newMark >= 35) {
+      passCount = passCount + 1;
+    }
+
+    console.log(`total marks: ${totalMarks}`);
+    console.log(`average mark: ${averageMarks}`);
+    console.log(`passcount: ${passCount}`);
+  }
+}
