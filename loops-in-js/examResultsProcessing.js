@@ -7,11 +7,13 @@ let lowestMark = 100;
 
 for (let j = 0; j < marks.length; j++) {
 
-  if (marks[j] >= 35) {
-    passCount++;
-  } else {
-    failCount++;
-  }
+//   if (marks[j] >= 35) {
+//     passCount++;
+//   } else {
+//     failCount++;
+//   }
+
+  marks[j] >= 35 ? passCount++ : failCount++
 
   if (marks[j] > highestMark) {
     highestMark = marks[j];
@@ -22,7 +24,7 @@ for (let j = 0; j < marks.length; j++) {
   }
 }
 
-console.log(passCount);
-console.log(failCount);
-console.log(highestMark);
-console.log(lowestMark);
+console.log(`passcount: ${passCount}`);
+console.log(`failcount: ${failCount}`);
+console.log(`highest mark: ${highestMark}`);
+console.log(`lowest mark: ${lowestMark}`);
