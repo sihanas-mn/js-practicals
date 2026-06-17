@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="myInput" />
+    <button id="sendInput">OK</button>
+    <p>OutPut: <span id="outHere"></span></p>
+
+    <script>
+      const myInput = document.getElementById('myInput') //grabs the html element (not the things inside that html) in this case : <input type="text" name="" id="myInput" />
+      const getValueBtn = document.getElementById('sendInput')
+      const outputVal = document.getElementById('outHere')
+
+      getValueBtn.addEventListener('click', () => {
+        const inputValue = myInput.value
+        // console.log(inputValue)
+
+        const firstLetter = inputValue.charAt(0).toUpperCase()
+        // console.log(inputValue.charAt(0).toUpperCase())
+
+        const wholeWord = firstLetter + inputValue.slice(1)
+        // console.log(wholeWord)
+
+        outputVal.innerHTML = wholeWord
+    })
+    </script>
+  </body>
+</html>
