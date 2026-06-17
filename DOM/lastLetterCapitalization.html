@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="inputField">
+    <button id="getValueBtn">OK</button>
+    <p>Output: <span id="outputspace"></span></p>
+
+    <script>
+        const inputVal = document.getElementById('inputField')
+        const getValBtn = document.getElementById('getValueBtn')
+        const outputVal = document.getElementById("outputspace")
+
+        getValBtn.addEventListener('click', () => {
+            const lastLetter = inputVal.value.at(-1)
+            // console.log(lastLetter)
+
+            const capitalLast = lastLetter.toUpperCase()
+            // console.log(capitalLast)
+
+            const finalWord = inputVal.value.slice(0, -1) + capitalLast
+            // console.log(finalWord)
+
+            outputVal.innerHTML = finalWord
+        })
+    </script>
+</body>
+</html>
