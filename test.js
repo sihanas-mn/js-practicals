@@ -1,9 +1,11 @@
-function num1() {
-  return 1;
+function num1(c) {
+  return c
 }
 
 function add(a, b) {
-    console.log(a + b())
+  let add2 = a + b(8);
+  return add2
 }
 
-add(3, num1)
+let final = add(3, num1);
+console.log(final)
