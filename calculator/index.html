@@ -32,6 +32,7 @@
           <button class="border p-1" onclick="numberDisplay()">.</button>
           <button class="border p-1" onclick="numberDisplay(0)">0</button>
           <button class="border p-1" onclick="numberDisplay()">=</button>
+          <button class="p-1 col-span-3 border" onclick="clearDisplay()">clear</button>
         </div>
       </div>
     </div>
@@ -42,6 +43,10 @@
         function numberDisplay(a) {
             elDisplay.value += a
             return
+        }
+
+        function clearDisplay() {
+          elDisplay.value = ""
         }
 
         
