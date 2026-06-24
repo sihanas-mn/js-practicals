@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="getCurrentDate()" style="min-height: 100vh;">
+    <div>
+        <p>Current Date & Time: <span id="dateTime"></span></p>
+    </div>
+
+    <script>
+        elDateTime = document.getElementById("dateTime")
+        elDateTime.innerText = Date()
+        
+        function getCurrentDate() {
+            elDateTime.innerText = Date()
+        }
+    </script>
+</body>
+</html>

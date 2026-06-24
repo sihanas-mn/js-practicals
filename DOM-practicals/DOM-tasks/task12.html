@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="getCharacters" />
+    <p>Character Count: <span id="countHere"></span></p>
+
+    <script>
+      let elGetCharacters = document.getElementById("getCharacters");
+      let elChCount = document.getElementById("countHere")
+
+      elGetCharacters.addEventListener("keypress", countLength)
+
+      function countLength() {
+        elChCount.textContent = elGetCharacters.value.length
+      }
+    </script>
+  </body>
+</html>

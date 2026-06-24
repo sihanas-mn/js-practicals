@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeImage()">CLick to change the image</button>
+    <img src="https://images.unsplash.com/photo-1766246099181-2055091f8721?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D" alt="img here">
+
+    <script>
+        elImage = document.querySelector('img')
+        
+        function changeImage() {
+            elImage.src = "https://images.unsplash.com/photo-1630312465536-5c6b1f76dc3f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFtYm9yZ2hpbml8ZW58MHx8MHx8fDA%3D"
+        }
+    </script>
+</body>
+</html>
