@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="inputField">
+    <button onclick="addToList()">Add to list</button>
+    <p>List</p>
+    <ul id="listHere" class="listOfItems"></ul>
+    <p>List Length: <span id="countHere"></span></p>
+
+    <script>
+        let elInpField = document.getElementById("inputField")
+        let elUnorderedList = document.getElementById("listHere")
+        let elListLength = document.getElementById("countHere")
+        let elClassListOfItems = document.getElementsByClassName("listOfItems")
+        
+        let count = 0;
+
+        function addToList() {
+            elUnorderedList.innerHTML += `<li>${elInpField.value}</li>`
+            count += elClassListOfItems.length
+            elListLength.textContent = count
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="inputField" />
+    <button onclick="addToList()">Add to list</button>
+    <button onclick="removeLast()">remove the last one</button>
+    <p>List</p>
+    <ul id="listHere"></ul>
+
+    <script>
+      let elInpField = document.getElementById("inputField");
+      let elUnorderedList = document.getElementById("listHere");
+
+      function addToList() {
+        elUnorderedList.innerHTML += `<li>${elInpField.value}</li>`;
+      }
+
+      function removeLast() {
+        elUnorderedList.removeChild(elUnorderedList.lastChild)
+      }
+    </script>
+  </body>
+</html>

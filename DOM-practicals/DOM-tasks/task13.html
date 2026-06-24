@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="inputField" />
+    <p>Result: <span id="resultHere"></span></p>
+    <button onclick="oddOrEven()">Check Result</button>
+    
+    <script>
+        let elInput = document.getElementById("inputField")
+        let elResult = document.getElementById("resultHere")
+
+        function oddOrEven() {
+            let tempHolder = elInput.value % 2
+
+            if (tempHolder == 1) {
+                elResult.textContent = "Odd"
+            } else if (tempHolder == 0) {
+                elResult.textContent = "Even"
+            }
+        }
+    </script>
+  </body>
+</html>

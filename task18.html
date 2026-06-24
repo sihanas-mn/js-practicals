@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="colorChange">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="colorChange">
+      us, iusto ipsam obcaecati corrupti amet reprehenderit sunt? Illo
+      consequuntur necessitatibus quae dolore id iusto deleniti pariatur
+      voluptate! Debitis, sunt?
+    </p>
+    <p class="colorChange">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum dolore
+      quae excepturi asperiores officiis.
+    </p>
+    <p class="colorChange">Lorem ipsum dolor sit amet.</p>
+
+    <script>
+      let elPara = document.querySelectorAll("p");
+      console.log(elPara)
+      
+
+      elPara.forEach((element) => {
+        element.style.backgroundColor = "green"
+        console.log(element)
+      })
+    </script>
+  </body>
+</html>

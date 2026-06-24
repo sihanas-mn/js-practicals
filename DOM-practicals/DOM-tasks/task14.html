@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="min-h-screen flex justify-center items-center">
+    <div class="space-y-4 border p-6">
+      <input type="text" name="" id="display" class="border-blue-500 border-2 p-2 text-right" />
+      <div class="grid gap-4">
+        <div class="grid grid-cols-4 gap-4">
+          <button class="border p-1" onclick="operator()">+</button>
+          <button class="border p-1">-</button>
+          <button class="border p-1">x</button>
+          <button class="border p-1">/</button>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+          <button class="border p-1" onclick="numberDisplay(7)">7</button>
+          <button class="border p-1" onclick="numberDisplay(8)">8</button>
+          <button class="border p-1" onclick="numberDisplay(9)">9</button>
+
+          <button class="border p-1" onclick="numberDisplay(4)">4</button>
+          <button class="border p-1" onclick="numberDisplay(5)">5</button>
+          <button class="border p-1" onclick="numberDisplay(6)">6</button>
+
+          <button class="border p-1" onclick="numberDisplay(1)">1</button>
+          <button class="border p-1" onclick="numberDisplay(2)">2</button>
+          <button class="border p-1" onclick="numberDisplay(3)">3</button>
+          <button class="border p-1" onclick="numberDisplay()">.</button>
+          <button class="border p-1" onclick="numberDisplay(0)">0</button>
+          <button class="border p-1" onclick="numberDisplay()">=</button>
+          <button class="p-1 col-span-3 border" onclick="clearDisplay()">clear</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        let elDisplay = document.getElementById("display")
+
+        function numberDisplay(a) {
+            elDisplay.value += a
+        }
+
+        
+        function clearDisplay() {
+          elDisplay.value = ""
+        }
+
+        let operator = function(a) {
+            return a
+        }
+
+
+
+        
+    </script>
+  </body>
+</html>
