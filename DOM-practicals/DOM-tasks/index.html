@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading1">this heading is going to be changed</h1>
+    <button onclick="changeHeading()">Click this button</button>
+    <script>
+        let ElHeading = document.getElementById("heading1")
+
+        function changeHeading() {
+            ElHeading.textContent = 'heading changed'
+        }
+    </script>
+</body>
+</html>
