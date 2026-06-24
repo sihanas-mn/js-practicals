@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="revealContent" style="display: none;">This content was hidden. But not now</p>
+    <button onclick="revealCon()">click to reveal</button>
+
+    <script>
+        function revealCon() {
+            ElPara = document.getElementById("revealContent")
+            ElPara.style.display = "block"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="toggleText">toggle hide and show</p>
+    <button onclick="toggleShowHide()">cick to toggle</button>
+
+    <script>
+      let EltogglePara = document.getElementById("toggleText");
+      EltogglePara.style.display = "none";
+
+      function toggleShowHide() {
+        if (EltogglePara.style.display == "block") {
+          EltogglePara.style.display = "none";
+        } else if (EltogglePara.style.display == "none") {
+          EltogglePara.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
