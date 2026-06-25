@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>counter: <span id="count-val"></span></p>
+    <button id="countBtn">count</button>
+
+    <script>
+        let elCounterBtn = document.getElementById("countBtn")
+        let elCountView = document.getElementById("count-val")
+        
+        elCounterBtn.addEventListener("click", counter)
+
+        countVal = 0
+        function counter() {
+            countVal++
+            elCountView.textContent = countVal
+        }
+    </script>
+</body>
+</html>
