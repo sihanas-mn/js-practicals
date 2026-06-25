@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="inputField" />
+    <p>Result: <span id="result"></span></p>
+    <button onclick="checkResult()">check result</button>
+
+    <script>
+      let elInpField = document.getElementById("inputField");
+      let elResult = document.getElementById("result");
+
+      function checkResult() {
+        if (elInpField.value >= 35) {
+          elResult.textContent = "pass";
+        } else if (elInpField.value < 35) {
+          elResult.textContent = "fail";
+        }
+      }
+    </script>
+  </body>
+</html>

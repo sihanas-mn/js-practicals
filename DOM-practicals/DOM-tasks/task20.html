@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+
+      .white-mode {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi there!</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, nulla!
+    </p>
+    <button onclick="darkMode()">Dark Mode</button>
+
+    <script>
+      let wholeBody = document.body;
+
+      function darkMode() {
+        wholeBody.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>
