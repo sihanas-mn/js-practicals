@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="min-h-screen flex justify-center items-center">
+    <h1 class="text-8xl font-extrabold" id="runTime"></h1>
+
+    <script>
+      let elTimeShow = document.getElementById("runTime");
+
+      function realTime() {
+        let timer = new Date();
+        let hours = timer.getHours();
+        let minutes = timer.getMinutes();
+        let seconds = timer.getSeconds();
+        elTimeShow.textContent = `${hours}:${minutes}:${seconds}`;
+      }
+
+      setInterval(realTime, 100);
+    </script>
+  </body>
+</html>

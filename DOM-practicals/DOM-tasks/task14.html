@@ -8,13 +8,34 @@
   </head>
   <body class="min-h-screen flex justify-center items-center">
     <div class="space-y-4 border p-6">
-      <input type="text" name="" id="display" class="border-blue-500 border-2 p-2 text-right" />
+      <input
+        type="text"
+        name=""
+        id="display"
+        class="border-blue-500 border-2 p-2 text-right"
+      />
       <div class="grid gap-4">
         <div class="grid grid-cols-4 gap-4">
-          <button class="border p-1" onclick="operator()">+</button>
-          <button class="border p-1">-</button>
-          <button class="border p-1">x</button>
-          <button class="border p-1">/</button>
+          <button class="border p-1" id="addition" onclick="getOperator(`+`)">
+            +
+          </button>
+          <button
+            class="border p-1"
+            id="subtraction"
+            onclick="getOperator(`-`)"
+          >
+            -
+          </button>
+          <button
+            class="border p-1"
+            id="multiplication"
+            onclick="getOperator(`*`)"
+          >
+            x
+          </button>
+          <button class="border p-1" id="division" onclick="getOperator(`/`)">
+            /
+          </button>
         </div>
 
         <div class="grid grid-cols-3 gap-4">
@@ -31,31 +52,74 @@
           <button class="border p-1" onclick="numberDisplay(3)">3</button>
           <button class="border p-1" onclick="numberDisplay()">.</button>
           <button class="border p-1" onclick="numberDisplay(0)">0</button>
-          <button class="border p-1" onclick="numberDisplay()">=</button>
-          <button class="p-1 col-span-3 border" onclick="clearDisplay()">clear</button>
+          <button class="border p-1" onclick="calculate()">=</button>
+          <button class="p-1 col-span-3 border" onclick="clearDisplay()">
+            clear
+          </button>
         </div>
       </div>
     </div>
 
     <script>
-        let elDisplay = document.getElementById("display")
+      let elDisplay = document.getElementById("display");
 
-        function numberDisplay(a) {
-            elDisplay.value += a
+      let finalVal = 0;
+      let operator = "";
+      let num1 = 0;
+      let num2 = 0;
+
+      function numberDisplay(a) {
+        elDisplay.value += a;
+
+        if (operator === "") {
+          num1 = elDisplay.value;
+          
+        } else {
+          num2 = elDisplay.value;
+        }
+      }
+
+      function clearDisplay() {
+        elDisplay.value = "";
+        // num1 = 0
+        // num2 = 0
+        // operator = ""
+        // finalVal = 0
+      }
+
+      function getOperator(op) {
+        elDisplay.value += op;
+        operator = op;
+        clearDisplay()
+      }
+
+      function calculate() {
+
+        let convertedNum1 = Number(num1)
+        let convertedNum2 = Number(num2)
+
+        if (operator === "+") {
+          finalVal = convertedNum1 + convertedNum2;
+        } else if (operator === "-") {
+          finalVal = convertedNum1 - convertedNum2;
+        } else if (operator === "*") {
+          finalVal = convertedNum1 * convertedNum2;
+        } else if ("/") {
+          finalVal = convertedNum1 / convertedNum2;
         }
 
-        
-        function clearDisplay() {
-          elDisplay.value = ""
-        }
+        elDisplay.value = finalVal;
+        operator = ""
+        console.log(operator)
+        console.log(elDisplay.value)
+        console.log(num1)
+        console.log(num2)
+        console.log(convertedNum1)
+        console.log(convertedNum2)
+        console.log(finalVal)
+      }
 
-        let operator = function(a) {
-            return a
-        }
-
-
-
-        
+      // setInterval(getdata, 2000)
     </script>
   </body>
 </html>
