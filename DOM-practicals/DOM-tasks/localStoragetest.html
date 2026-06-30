@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+  </head>
+  <body>
+    <input class="border border-blue-400 rounded-lg p-2" type="text" name="" id="getName" placeholder="Enter your name here" />
+    <button class="border border-blue-600 rounded-lg p-2" id="saveVal">Click to save</button>
+    <button class="border border-blue-600 rounded-lg p-2" onclick="getLocal()">get from local</button>
+    <p id="showVal"></pid>
+    <script>
+      let elInp = document.getElementById("getName");
+      let elShow = document.getElementById("showVal")
+      let elSaveBtn = document.getElementById("saveVal")
+
+        elSaveBtn.addEventListener("click", setLocal)
+
+      function setLocal() {
+        sessionStorage.setItem("name", elInp.value);
+      }
+
+      function getLocal() {
+        
+        elShow.textContent = sessionStorage.getItem("name")
+      }
+
+    </script>
+  </body>
+</html>
